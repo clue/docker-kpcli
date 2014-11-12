@@ -16,7 +16,7 @@ Further runs will be immediate, as the image will be cached locally.
 The recommended way to run this container looks like this:
 
 ```bash
-$ docker run -it --rm -v /home/user/Desktop/keepass.kdb:/data/keepass.kdb --net=none clue/kpcli
+$ docker run -it --rm -v /home/me/secret.kdb:/data/keepass.kdb --net=none clue/kpcli
 ```
 
 While this might seem complicated at first, it's a rather common setup following docker's conventions:
