@@ -16,7 +16,7 @@ Further runs will be immediate, as the image will be cached locally.
 The recommended way to run this container looks like this:
 
 ```bash
-$ docker run -it --rm -v /home/user/Desktop/keepass.kdb:/data/keepass.kdb clue/kpcli
+$ docker run -it --rm -v /home/user/Desktop/keepass.kdb:/data/keepass.kdb --net=none clue/kpcli
 ```
 
 While this might seem complicated at first, it's a rather common setup following docker's conventions:
@@ -24,6 +24,7 @@ While this might seem complicated at first, it's a rather common setup following
 * `-it` will run an interactive session that can be terminated with CTRL+C
 * `--rm` will run a temporary session that will make sure to remove the container on exit
 * `-v {AbsolutePathToKeepassFile}:/data/keepass.kdb` should be passed to mount the given KeePass file into the container
+* `--net=none` should be passed to disable any and all network access, just in case
 * `clue/kpcli` the name of this docker image
 
 ### Help
